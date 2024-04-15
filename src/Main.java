@@ -1,5 +1,8 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.List;
+
 public class MainProgram {
     public static void main (String[] args) {
         String url = "jdbc:mysql://localhost:3306/Students";
@@ -46,3 +49,19 @@ public class MainProgram {
         }
 
     }}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("John", 30);
+        String personJson = JsonConverter.convertObjectToJson(person);
+        System.out.println("Person JSON: " + personJson);
+
+        List<Person> personList = Arrays.asList(
+                new Person("Alice", 25),
+                new Person("Bob", 35),
+                new Person("Eve", 28)
+        );
+        String personListJson = JsonConverter.convertListToJson(personList);
+        System.out.println("Person List JSON: " + personListJson);
+    }
+}
