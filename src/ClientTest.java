@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import com.google.gson.Gson;
+
 
 public class ClientTest {
     @Test
